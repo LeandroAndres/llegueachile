@@ -76,10 +76,10 @@ WSGI_APPLICATION = 'llegue_a_chile.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'mysql_cymysql',
         'NAME': 'llegueachile',
-        'USER': 'LeandroAndres',
-        'PASSWORD': 'petota123',
+        'USER': 'root',
+        'PASSWORD': '',
         'HOST': 'LeandroAndres.mysql.pythonanywhere-services.com',
         'PORT': '3306',
     }
