@@ -1,0 +1,1252 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="es-CL">
+
+
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Llegue a Chile</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/argon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/argon.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> {% load static %}
+    <link href="{% static '//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css' %}" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="{% static 'https://use.fontawesome.com/releases/v5.3.1/css/all.css' %}" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        -->
+    <!-- crossorigin="anonymous"> -->
+
+
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+
+</head>
+{% load staticfiles %}
+
+<body id="top">
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+        <div id="nav">
+            <!-- Top Nav -->
+            <div id="nav-top">
+                <div class="container">
+
+                    <!-- logo -->
+                    <div class="nav-logo">
+                        <a href="index.html" class="logo">
+                            <img src="{% static 'images/logo.png' %}" alt="">
+                        </a>
+                    </div>
+                    <!-- /logo -->
+
+                </div>
+            </div>
+            <!-- /Top Nav -->
+
+            <!-- Main Nav -->
+            <div id="nav-bottom">
+                <div class="container">
+                    <!-- nav -->
+                    <ul class="nav-menu">
+                        <li>
+                            <a href="{% url 'index' %}">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="#about">Presentación</a>
+
+                        </li>
+                        <li class="has-dropdown megamenu">
+                            <a href="#">Chile</a>
+                            <div class="dropdown">
+                                <div class="dropdown-body">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <h4 class="dropdown-heading">Categorias</h4>
+                                            <ul class="dropdown-list">
+                                                <li>
+                                                    <a href="{% url 'trabajo' %}">Trabajo</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'vivienda' %}">Vivienda</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'educacion' %}">Educación</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'salud' %}">Salud</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'transporte' %}">Transporte</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <h4 class="dropdown-heading">Trabajo</h4>
+                                            <ul class="dropdown-list">
+                                                <li>
+                                                    <a href="{% url 'trabajo' %}">Trabajador/a</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'trabajo' %}">Emprender</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'trabajo' %}">Empleado/a Domestica</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'trabajo' %}">Embarazo</a>
+                                                </li>
+                                            </ul>
+                                            <h4 class="dropdown-heading">Vivienda</h4>
+                                            <ul class="dropdown-list">
+                                                <li>
+                                                    <a href="{% url 'vivienda' %}">Subsidio habitacional</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'vivienda' %}">Alquileres</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <h4 class="dropdown-heading">Educación</h4>
+                                            <ul class="dropdown-list">
+                                                <li>
+                                                    <a href="{% url 'educacion' %}">Básica y media</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'educacion' %}">Universitaria</a>
+                                                </li>
+                                            </ul>
+                                            <h4 class="dropdown-heading">Salud</h4>
+                                            <ul class="dropdown-list">
+                                                <li>
+                                                    <a href="{% url 'salud' %}">Derechos</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'salud' %}">Pública</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'salud' %}">Privada</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <h4 class="dropdown-heading">Transporte</h4>
+                                            <ul class="dropdown-list">
+                                                <li>
+                                                    <a href="{% url 'transporte' %}">Transantiago</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'transporte' %}">Metro</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'transporte' %}">Ciclovias</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="{% url 'conocer' %}">Conocer</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'documentacion' %}">Documentación</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="has-dropdown" href="#" data-toggle="modal" data-target="#exampleModal">Login</a>
+                        </li>
+                    </ul>
+                    <!-- /nav -->
+                </div>
+            </div>
+            <!-- /Main Nav -->
+        </div>
+
+        <nav class="header-nav">
+
+            <a href="#0" class="header-nav__close" title="close">
+                <span>Close</span>
+            </a>
+
+            <div class="header-nav__content">
+                <h3>Navigation</h3>
+
+                <ul class="header-nav__list">
+                    <li class="current">
+                        <a class="smoothscroll" href="#home" title="home">Inicio</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#about">Presentación</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="{% url 'trabajo' %}">Trabajo</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="{% url 'vivienda' %}">Vivienda</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="{% url 'educacion' %}">Educación</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="{% url 'salud' %}">Salud</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="{% url 'transporte' %}">Transporte</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="{% url 'conocer' %}">Conocer</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="{% url 'documentacion' %}">Documentación</a>
+                    </li>
+
+                </ul>
+
+            </div>
+            <!-- end header-nav__content -->
+
+        </nav>
+        <!-- end header-nav -->
+
+        <a class="header-menu-toggle" href="#0">
+            <span class="header-menu-text"></span>
+            <span class="header-menu-icon"></span>
+        </a>
+
+    </header>
+    <!-- end s-header -->
+
+
+    <!-- home
+    ================================================== -->
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="{% static 'images/hero-bg.jpg' %}"
+        data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+
+        <div class="overlay"></div>
+        <div class="shadow-overlay"></div>
+
+        <div class="home-content">
+
+
+            <div class="row home-content__main">
+
+                <h3>Bienvenido a Llegué a Chile!</h3>
+
+                <h1>
+                    Guía para migrantes
+                    <br> Todo lo que necesitas saber para estar en Chile.
+
+                </h1>
+
+                <div class="home-content__buttons">
+                    <a href="{% url 'formulario' %}" class="smoothscroll btn btn--stroke">
+                        Publicar un aviso
+                    </a>
+                    <a href="#about" class="smoothscroll btn btn--stroke">
+                        Necesito ayuda!
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="home-content__scroll">
+                <a href="#about" class="scroll-link smoothscroll">
+                    <span>Ir abajo</span>
+                </a>
+            </div>
+
+            <div class="home-content__line"></div>
+
+        </div>
+        <!-- end home-content -->
+
+
+        <ul class="home-social">
+            <li>
+                <div class="dropdown">
+                    <li href="#0">
+                        <i class="icon-settings" aria-hidden="true">
+                            <img src="{% static 'images/idiomas.png' %}" alt="">
+                        </i>
+                        <span>Language</span>
+                    </li>
+
+                </div>
+            </li>
+
+        </ul>
+        <!-- end home-social -->
+
+    </section>
+    <!-- end s-home -->
+
+
+    <!-- about
+    ================================================== -->
+    <section id='about' class="s-about" data-parallax="scroll" data-image-src="{% static 'images/isla.jpg' %}">
+
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead subhead--dark"></h3>
+                <h1 class="display-1 display-1--light">Presentación</h1>
+            </div>
+
+        </div>
+        <!-- end section-header -->
+
+        <div class="text-center">
+            <div class="card-text">
+                <p class="lead">
+                    <em>
+                        Las personas que deciden migrar a Chile deben tramitar permisos o visas que autoricen su estadía en el país, tan pronto como
+                        llegan. Estas autorizaciones son entregadas por el Ministerio del Interior y Seguridad Pública a
+                        través del Departamento de Extranjería y Migración en la Provincia de Santiago, y a través de las
+                        Gobernaciones Provinciales en el resto del país. Debido a la gran cantidad de información y a las
+                        diferencias que existen entre países, puede resultar difícil entender los requisitos y pasos que
+                        usted debe seguir para obtener una visa. Por eso se ha elaborado esta página, que contiene la información
+                        necesaria para iniciar y completar su proceso de regularización migratoria. Aquí encontrará información
+                        sobre los distintos permisos de residencia que existen en Chile, un glosario con diferentes términos
+                        empleados y sus significados, y las direcciones de las oficinas de Extranjería en el territorio nacional.
+                        Además contiene información sobre los beneficios y derechos sociales a los que usted puede acceder
+                        en Chile, relacionados con Educación, Salud, Trabajo, Vivienda y Justicia. Esperamos que este material
+                        sea de utilidad para usted y su familia, y le ayude a contar con una buena calidad de vida en Chile.
+                    </em>
+                </p>
+            </div>
+        </div>
+        <!-- end about-desc -->
+
+
+        <div class="about__line"></div>
+
+    </section>
+    <!-- end s-about -->
+
+
+    <!-- SECTION -->
+    <div class="section">
+        <!-- container -->
+        <div class="row section-header" data-aos="fade-up" data-parallax="scroll">
+            <div class="col-full">
+                <h3 class="subhead">Noticias</h3>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- row -->
+            <div id="hot-post" class="row hot-post">
+                <div class="col-md-8 hot-post-left">
+                    <!-- post -->
+                    <div class="post post-thumb">
+                        <a class="post-img" href="blog-post.html">
+                            <img src="{% static 'images/trabajadores.jpg' %}" alt="">
+                        </a>
+                        <div class="post-body">
+                            <div class="post-category">
+                                <a href="category.html"></a>
+                            </div>
+                            <h3 class="post-title title-lg">
+                                <a href="#" data-toggle="modal" data-target="#miventana1">La mitad de las pymes chilenas dice tener trabajadores extranjeros</a>
+                            </h3>
+                        </div>
+                    </div>
+                    <!-- /post -->
+                </div>
+                <div class="col-md-4 hot-post-right">
+                    <!-- post -->
+                    <div class="post post-thumb">
+                        <a class="post-img" href="blog-post.html">
+                            <img src="{% static 'images/visa.jpg' %}" alt="">
+                        </a>
+                        <div class="post-body">
+                            <div class="post-category">
+                                <a href="category.html"></a>
+                            </div>
+                            <h3 class="post-title">
+                                <a href="#" data-toggle="modal" data-target="#miventana2">Mesa sindical propone visa temporal para extranjeros</a>
+                            </h3>
+                        </div>
+                    </div>
+                    <!-- /post -->
+
+                    <!-- post -->
+                    <div class="post post-thumb">
+                        <a class="post-img" href="blog-post.html">
+                            <img src="{% static 'images/haitianos.jpg' %}" alt="">
+                        </a>
+                        <div class="post-body">
+                            <div class="post-category">
+                                <a href="category.html"></a>
+                                <a href="category.html"></a>
+                            </div>
+                            <h3 class="post-title">
+                                <a href="#" data-toggle="modal" data-target="#miventana3">Al 86% de los haitianos les cuesta más encontrar trabajo que a otros extranjeros en Chile
+                                    según estudio</a>
+                            </h3>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /post -->
+                </div>
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /SECTION -->
+
+
+
+
+
+    <!-- SECTION -->
+    <div class="section">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+
+                <!-- row -->
+
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h2 class="title">Ofertas Laborales</h2>
+                    </div>
+                </div>
+                <!-- post -->
+                <div class="col-md-4">
+                    <div class="post">
+                        <a class="post-img" href="blog-post.html">
+                            <img src="{% static 'images/picking.jpg' %}" alt="">
+                        </a>
+                        <div class="post-body">
+                            <div class="post-category">
+                                <a href="category.html"></a>
+                            </div>
+                            <h3 class="post-title">
+                                <a href="#" data-toggle="modal" data-target="#miventana4">Operadores Picking Quilicura El cortijo
+                                </a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- /post -->
+
+                <!-- post -->
+                <div class="col-md-4">
+                    <div class="post">
+                        <a class="post-img" href="blog-post.html">
+                            <img src="{% static 'images/aseo.jpg' %}" alt="">
+                        </a>
+                        <div class="post-body">
+                            <div class="post-category">
+                                <a href="category.html"></a>
+
+                            </div>
+                            <h3 class="post-title">
+                                <a href="#" data-toggle="modal" data-target="#miventana5">Auxiliar de aseo / Quilicura</a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- /post -->
+
+                <!-- post -->
+                <div class="col-md-4">
+                    <div class="post">
+                        <a class="post-img" href="blog-post.html">
+                            <img src="{% static 'images/operario.jpg' %}" alt="">
+                        </a>
+                        <div class="post-body">
+                            <div class="post-category">
+                                <a href="category.html"></a>
+                            </div>
+                            <h3 class="post-title">
+                                <a href="#" data-toggle="modal" data-target="#miventana6">Operario turno PM para tienda ubicada en AIEP de Bellavista! de lunes a sábado!</a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /post -->
+        </div>
+        <!-- /row -->
+
+        <!-- row -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h2 class="title">Documentación</h2>
+                </div>
+            </div>
+            <!-- post -->
+            <div class="col-md-4">
+                <div class="post post-sm">
+                    <a class="post-img" href="blog-post.html">
+                        <img src="{% static 'images/viajar-documentacion.jpg' %}" alt="">
+                    </a>
+                    <div class="post-body">
+                        <div class="post-category">
+                            <a href="category.html">Documentación</a>
+                        </div>
+                        <h3 class="post-title title-sm">
+                            <a href="#" data-toggle="modal" data-target="#miventana7">¿Que documentos debo tener para viajar?</a>
+                        </h3>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- /post -->
+
+            <!-- post -->
+            <div class="col-md-4">
+                <div class="post post-sm">
+                    <a class="post-img" href="blog-post.html">
+                        <img src="{% static 'images/llegar-documentacion.jpg' %}" alt="">
+                    </a>
+                    <div class="post-body">
+                        <div class="post-category">
+                            <a href="category.html">Documentación</a>
+                        </div>
+                        <h3 class="post-title title-sm">
+                            <a href="#" data-toggle="modal" data-target="#miventana8">¿Que debo hacer al momento de llegar a Chile?</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <!-- /post -->
+
+            <!-- post -->
+            <div class="col-md-4">
+                <div class="post post-sm">
+                    <a class="post-img" href="blog-post.html">
+                        <img src="{% static 'images/migracion.jpg' %}" alt="">
+                    </a>
+                    <div class="post-body">
+                        <div class="post-category">
+                            <a href="category.html">Documentación</a>
+                        </div>
+                        <h3 class="post-title title-sm">
+                            <a href="#" data-toggle="modal" data-target="#miventana9">¿Cuáles son los tipos de visa de residencia temporal?
+                            </a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <!-- /post -->
+        </div>
+        <!-- /row -->
+
+
+
+
+
+        <br>
+        <br>
+        <!-- social widget -->
+        <div class="row">
+            <div class="aside-widget col-md-12">
+                <div class="section-title">
+                    <h2 class="title">Social Media</h2>
+                </div>
+                <div class="social-widget">
+                    <ul>
+                        <li>
+                            <a href="#" class="social-facebook">
+                                <i class="fa fa-facebook"></i>
+                                <span>21.2K
+                                    <br>Followers</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="social-twitter">
+                                <i class="fa fa-twitter"></i>
+                                <span>10.2K
+                                    <br>Followers</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="social-google-plus">
+                                <i class="fa fa-google-plus"></i>
+                                <span>5K
+                                    <br>Followers</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /social widget -->
+
+        <!-- category widget -->
+        <div class="row">
+            <div class="aside-widget col-md-12">
+                <div class="section-title">
+                    <h2 class="title">Categorias</h2>
+                </div>
+                <div class="category-widget">
+                    <ul>
+                        <li>
+                            <a href="{% url 'trabajo' %}">Trabajo
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'transporte' %}">Transporte
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'educacion' %}">Educación
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'vivienda' %}">Vivienda
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'salud' %}">Salud
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'documentacion' %}">Documentación
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'conocer' %}">Conocer Chile
+
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /category widget -->
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+
+    <!-- avisos
+    ================================================== -->
+
+    <section id="clients" class="s-clients">
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">Avisos</h3>
+                <h1 class="display-2">Encuentra empleos, alquileres, cualquier tipo de dato de ayuda.</h1>
+            </div>
+        </div>
+        <!-- end section-header -->
+
+        <div class="row clients-outer" data-aos="fade-up">
+            <div class="col-full">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Operarios de Producción para La Cisterna (Lunes a Viernes)</h5>
+                                        <p class="card-text">Lugar de Trabajo: San Bernardo, Región Metropolitana Publicado: Publicado hace 14
+                                            días Salario No especificado Tipo de puesto: Full-time Área: Producción Importante
+                                            empresa dedicada a la producción, elaboración y comercialización de alimentos
+                                            se encuentra en búsqueda de Operarios de Producción para trabajar en La Cisterna.
+                                            Se ofrece Renta liquida de $ 330.000 Lugar de trabajo: La Cisterna Horarios Lunes
+                                            a Viernes turno día</p>
+                                        <a href="#" class="btn btn-primary">Postular!</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Departamento en Arriendo Pedro Fontova , Huechuraba, Santiago</h5>
+                                        <p class="card-text">Departamento a pasos de locales comerciales, bancos, farmacias mall plaza norte caminando
+                                            a 3 cuadras, excelente conectividad, limpio y muy bien cuidado !!! 3 dormitorios,2
+                                            baños, estacionamiento y bodega requisitos de arrendamiento arrendatario. - c.
+                                            Identidad (extranjeros residencia definitiva). - 3 liq. Sueldo (renta igual o
+                                            superior a 3. 5 rentas de arriendo). -copia contrato trabajo. -certificado afp
+                                            ultimas 24 cotizaciones. -certificado informes comercial al día codeudor solidario
+                                            (obligatorio) mismos requisitos arrendatario "arriendo es documentado anualmente"
+                                            departamento sin muebles (fotos referenciales) cordinar visitas al whatsapp</p>
+                                        <a href="#" class="btn btn-primary">Contactar!</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">CLASES GRATUITAS DE ESPAÑOL PARA HAITIANOS</h5>
+                                        <p class="card-text">KOU ESPANYÓL GRATIS! Nan kontèks pwogram fran-alman pou imigrasyon (Migr’artes) e
+                                            avèk volonte akonpanye prosesis entegrasyon imigran yo ki pa ko pale espanyòl,
+                                            Goethe Institut, envite tout imigran ayisyen nan kou espanyòl. Pou enfòrmasyon
+                                            ak enskripsyon kontakte juliane.kiss@goethe.de pou w enskri w ap voye yn CV ak
+                                            yon lèt motivasyon ki fet an fransè. Kòmanse: madi 13 jen 2017 Defini: 6 semèn
+                                            Madi e vandredi depi 9vè30 nan maten jiska inè nan aprè midi. Plas: Sala Federico
+                                            García Lorca Museo de la Solidaridad Salvador Allende Av. República 475, Santiago.</p>
+                                        <a href="#" class="btn btn-primary">Contactar!</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Departamento HomeStudio ubicado a 2 minutos caminando de la estación de Metro Santa
+                                            Ana.
+                                        </h5>
+                                        <p class="card-text">Cuenta con un living, cocina equipada de tipo americana, cama de 2 plazas, 2 veladores,
+                                            clóset, baño y balcón. El departamento tiene 30 m² aproximadamente. El edificio
+                                            tiene servicios como gimnasio, piscina, quincho para hacer carne asada (barbecue),
+                                            sala multiuso y lavandería cuyo valor es de $1.000.- CLP por carga de ropa (lavado
+                                            o secado). A la tarifa se deben agregar los gastos extras (gastos comunes, electricidad,
+                                            agua fría, agua caliente e internet) que suman $ 75.000.- CLP aproximadamente.
+                                            Se debe pagar garantía (depósito) la que será devuelta al finalizar el período
+                                            de arriendo, además se debe pagar $ 20.000. - CLP por concepto del limpieza final.
+                                            Cerca se encuentra el barrio República en el cual hay una gran variedad de Universidades
+                                            (Universidad de Chile, Universidad Diego Portales, Universidad Andrés Bello,
+                                            entre otras) e institutos profesionales. El barrio Brasil se encuentra a unos
+                                            8 minutos caminando del lugar, se caracteriza por su gran variedad de bares,
+                                            cafés y restoranes. Es posible incluir estacionamiento por un valor extra. Valor
+                                            $270.000
+                                        </p>
+                                        <a href="#" class="btn btn-primary">Contactar!</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {% for a in aviso %}
+                            <div class="col-sm-6">
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{a.titulo}}</h5>
+                                        <h3>{{a.emailcontacto}}</h3>
+                                        <h3>{{a.contacto}}</h3>
+                                        <p class="card-text">{{a.descripcion}}</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            {% endfor %}
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        </div>
+
+        </div>
+
+        </div>
+        <!-- fin avisos -->
+
+
+        <!-- fin avisos -->
+
+    </section>
+
+    <!-- end s-clients -->
+    <div class="row">
+
+        <div class="contact-info col-md-12">
+
+            <div class="aside-widget">
+                <div class="section-title">
+                    <h2 class="title">Contactenos</h2>
+                </div>
+                <div class="newsletter-widget">
+                    <form>
+                        <h3>Entérate de las novedades de nuestra página, suscribete!</h3>
+                        <input class="input" name="newsletter" placeholder="Ingrese su correo">
+                        <button class="primary-button">Suscribete</button>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- end contact-info -->
+
+    </div>
+    <!-- end contact-secondary -->
+
+    <!-- footer
+    ================================================== -->
+    <footer>
+
+        <div class="row footer-bottom">
+
+            <div class="col-twelve">
+                <div class="copyright">
+                    <span>© Copyright Glint 2017</span>
+                    <span>Site Template by
+                        <a href="https://www.colorlib.com/">Colorlib</a>
+                    </span>
+                </div>
+
+                <div class="go-top">
+                    <a class="smoothscroll" title="Subir" href="#top">
+                        <img src="{% static 'images/up.png' %}" alt="">
+                        <i class="icon-arrow-up" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <!-- end footer-bottom -->
+
+    </footer>
+    <!-- end footer -->
+    <!-- Modal login -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form method="POST" action="{% url 'avisos' %}" role="login">
+                    {% csrf_token %}
+                    <img src="{% static 'images/logo.png' %}" class="img-responsive" alt="" />
+                    <input type="email" name="nombre_usuario" placeholder="Email" required class="form-control input-lg" />
+
+                    <input type="password" class="form-control input-lg" id="password" placeholder="Password" required="" />
+
+
+                    <div class="pwstrength_viewport_progress"></div>
+
+
+                    <button type="submit" name="go" class="btn btn-lg btn-primary btn-block">Ingresar</button>
+                    <div>
+                        <a href="{% url 'formulario' %}">Crear cuenta</a> or
+                        <a href="#">Olvidé mi contraseña</a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!--MODALS -->
+
+
+
+    <!--modal miventana1-->
+    <div class="container" style="margin-top: 60px;">
+        <div class="modal fade" id="miventana1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-header="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>La mitad de las pymes chilenas dice tener trabajadores extranjeros</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+                    </div>
+                    <div class="modal-body">
+                        <h3>
+                            Al parecer, las medidas anunciadas por el Presidente Sebastián Piñera a principios de abril para normalizar el sistema de
+                            ingreso al país de los inmigrantes, ya tiene algunos efectos en las pequeñas y medianas empresas.
+                            <br>
+                            <br> Según la última entrega del “Índice de percepciones y expectativas económicas de las pymes”,
+                            del Barómetro Pyme que realiza mensualmente la compañía de soluciones financieras para empresas
+                            y pymes, AVLA, un 49,7% de los encuestados afirma que su empresa cuenta con trabajadores extranjeros
+                            (ver gráfico) y en un 58% de ellas, este grupo representa más del 5% del capital humano.
+                            <br>
+                            <br> Esto demuestra que cada vez es más recurrente la contratación de ciudadanos de otros países
+                            en este segmento económico, lo que podría aumentar durante los próximos meses o años, tomando
+                            en cuenta que entre las medidas anunciadas por el Mandatario, está la Ley de Migración, que busca
+                            modernizar la normativa al respecto, cuyos principales aspectos son regular y ordenar los flujos
+                            migratorios, ampliar los tipos de visas, y mejorar y agilizar los procesos de expulsión.
+                        </h3>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--modal miventana2-->
+    <div class="container" style="margin-top: 60px;">
+        <div class="modal fade" id="miventana2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-header="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Mesa sindical propone visa temporal para extranjeros</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+                    </div>
+                    <div class="modal-body">
+                        <h3>
+                            Las tres centrales sindicales del país (CUT, CAT y UNT), entregaron al Ministerio del Trabajo y Previsión Social, diez propuestas
+                            con el objetivo de mejorar las condiciones de vida de los trabajadores extranjeros en el país.
+                            Entre los planteamientos de la mesa, se incluye poner fin a la visa de trabajo sujeta a contrato
+                            y su reemplazo por una visa temporaria que facilite a los migrantes encontrar un nuevo empleo
+                            cuando están cesantes.
+                            <br>
+                            <br> Asimismo, también sugirieron permitir la portabilidad de los fondos de pensiones para facilitar
+                            la jubilación de los extranjeros en su país natal, si así lo desean, junto con asegurar el derecho
+                            legal del envío al exterior de remesas de dinero a sus familias. En tanto, se propone ampliar
+                            los escasos convenios de convalidación de estudios a todas las nacionalidades migrantes, facilitando
+                            así las posibilidades laborales.
+                            <br>
+                            <br> Mientras, en lo sindical, se pide el derecho de los migrantes a afiliarse a sindicatos nacionales,
+                            sin que tengan que formar sus propias agrupaciones.
+                        </h3>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--modal miventana3-->
+    <div class="container" style="margin-top: 60px;">
+        <div class="modal fade" id="miventana3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-header="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>El idioma es el principal obstáculo, según el sondeo de la U. de Talca. Además, un 48% declaró haber
+                            sido discriminado alguna vez.</h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+                    </div>
+                    <div class="modal-body">
+                        <h4>
+                            La dificultad para encontrar trabajo o hallar uno que permita tener condiciones mínimas de vida digna, son parte de los principales
+                            argumentos esgrimidos por los ciudadanos haitianos que manifiestan su voluntad de abandonar Chile
+                            y regresar a su país, tras venir en busca de oportunidades.
+                            <br>
+                            <br> Lo anterior es respaldado por los resultados del estudio "Haitianos en Chile: integración laboral,
+                            social y cultural", elaborado por el Centro Nacional de Estudios Migratorios (Cenem) de la Universidad
+                            de Talca, que reveló que al 86% de los isleños presentes en el país les cuesta más encontrar
+                            trabajo que a migrantes de otras nacionalidades.
+                            <br>
+                            <br> El director de la mentada entidad, Medardo Aguirre, afirmó que la principal causa de lo anterior
+                            es la barrera idiomática, la cual, fue señalada por el 60,1% de los encuestados.
+                        </h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--modal miventana4-->
+    <div class="container" style="margin-top: 60px;">
+        <div class="modal fade" id="miventana4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-header="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Operadores Picking Quilicura El cortijo</h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+                    </div>
+                    <div class="modal-body">
+                        <h4>
+                            Lugar de Trabajo: Quilicura, Región Metropolitana
+                            <br> Salario No especificado
+                            <br> Tipo de puesto: Full-time
+                            <br> Área: Otros
+                            <br>
+                            <br> Requisitos:
+                            <br> -Mayores de 18 años
+                            <br> -Extranjeros con permiso de trabajo vigente.
+                            <br> -Experiencia como auxiliar de Bodega
+                            <br> -Experiencia en radiofrecuencia ( no excluyente)
+                        </h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--modal miventana5-->
+    <div class="container" style="margin-top: 60px;">
+        <div class="modal fade" id="miventana5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-header="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Auxiliar de aseo / Quilicura TAWA CHILE SA</h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <h4>
+                            Lugar de Trabajo: Quilicura, Región Metropolitana
+                            <br> Salario No especificado
+                            <br> Tipo de puesto: Full-time
+                            <br> Área: Otros
+                            <br>
+                            <br> Importante empresa dedicada al rubro de los chocolates, requiere contratar auxiliar de aseo
+                            para trabajar en sus dependencias, ubicadas en Quilicura.
+                            <br> Funcion: Mantencion de orden y aseo de la bodega y oficinas.
+                            <br> Requisitos: Experiencia en el cargo.
+                            <br> Jornada Laboral: lunes a viernes 7:30 a 17:30 hrs.
+                            <br> Renta: $350.000
+                        </h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--modal miventana6-->
+    <div class="container" style="margin-top: 60px;">
+        <div class="modal fade" id="miventana6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-header="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Operario turno PM para tienda ubicada en AIEP de Bellavista! de lunes a sábado!</h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <h4>
+                            Lugar de Trabajo: Quilicura, Región Metropolitana
+                            <br> Salario No especificado
+                            <br> Tipo de puesto: Full-time
+                            <br> Área: Otros
+                            <br>
+                            <br> Importante empresa dedicada al rubro de retail y mini market con sucursales a lo largo de todo
+                            el país, requiere a los mejores Operarios para integrarse a nuestro equipo de trabajo, buscamos
+                            personas comprometidas, con actitud de servicio para nuestra tienda ubicada en AIEP de Patio
+                            Bellavista.
+                            <br> Ofrecemos una Renta Líquida de $311.000
+                            <br> Jornada Laboral de Lunes a viernes de 13:00 a 22:00 y sábados 14:00 a 20:00 hrs.
+                            <br> Con una hora de colación.
+                        </h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--modal miventana7-->
+    <div class="container" style="margin-top: 60px;">
+        <div class="modal fade" id="miventana7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-header="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Preparando los documentos para el viaje</h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <h4>
+                            <h3>Documentos requeridos para mayores de edad</h3>
+                            Hoy los documentos que podés utilizar para pasar a Chile sin problemas son:
+                            <br> Pasaporte y DNI Tarjeta
+                            <br>
+                            <br> Te recordamos que a partir del 1 de noviembre de 2016 (última extensión) no se puede pasar más
+                            con el clásico DNI libreta Verde (o rojo para los extranjeros) o la libreta Celeste que se entregaba
+                            a principios de los cambios de la nueva documentación. Básicamente todos los documentos escritos
+                            a mano ya no están permitidos y sólo se pueden utilizar documentos digitalizados.
+                            <h3>Viajando con menores</h3>
+                            Algo muy importante cuando viajas con menores de edad es que deberás acreditar la paternidad ante los organismos de control.
+                            Con esto nos referimos a que tenés que presentar la documentación que muestra quiénes son los
+                            padres.
+                            <br> Presentar la Partida o Acta de Nacimiento es fundamental para viajar con menores a Chile. La
+                            misma debe ser en su original o sino una fotocopia certificada. Las fotocopias simples no son
+                            permitidas. También se puede presentar la libreta de familia si en ella se especifican los nombres
+                            de los padres del menor.
+                        </h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--modal miventana9-->
+    <div class="container" style="margin-top: 60px;">
+        <div class="modal fade" id="miventana9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-header="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>¿Cuáles son los tipos de visa de residencia temporal?</h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <h4>
+                            <h3>Visa Sujeta a Contrato:</h3>
+                            Habilita para residir y para trabajar en forma exclusiva con el empleador que suscribe el contrato. Tiene una duración de
+                            hasta dos años y puede prorrogarse indefinidamente, aunque tras permanecer durante dos años continuos
+                            con esta residencia se puede solicitar la Permanencia Definitiva. El término del contrato de
+                            trabajo da término inmediato la visa.
+                            <br>
+                            <h3>Visa Temporaria:</h3>
+                            Habilita para residir y realizar cualquier actividad lícita. Tiene una duración de hasta un año, y es prorrogable sólo por
+                            un año más, período tras el cual se debe solicitar la Permanencia Definitiva o hacer abandono
+                            del país. Se puede entregar a los siguientes extranjeros:
+                            <br> Vinculados familiarmente con chilenos o extranjeros con permanencia definitiva
+                            <br> Religiosos
+                            <br> Jubilados o rentistas
+                            <br> Inversionistas y comerciantes
+                            <br> Ex residentes (extranjeros cuya residencia en Chile perdió su vigencia)
+                            <br> Hijos de extranjero transeúnte (extranjero no residente en el país)
+                            <br> Profesionales y técnicos de nivel superior,
+                            <br> Trabajadores con dos o más contratos
+                            <br> Trabajadores remunerado en el exterior
+                            <br> Periodistas o profesionales de medios de comunicación
+                            <br> Mujeres embarazadas y tratamiento médico
+                            <br> Nacionales de Argentina, Bolivia, Brasil, Paraguay y Uruguay
+                            <br> Unión Civil
+                            <br>
+                            <h3>Visa de Estudiante:</h3>
+                            Habilita a estudiar en establecimientos de enseñanza reconocidos por el Estado. Tiene una duración de hasta un año, o hasta
+                            la duración de la beca para quienes cuentan con una. Es prorrogable hasta el término de los estudios,
+                            y luego permite postular a la Permanencia Definitiva.
+                            <h3>Refugio y asilo político:</h3>
+                            Para extranjeros cuya integridad se encuentra en peligro.
+                        </h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- end photoSwipe background -->
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader">
+            <div class="line-scale-pulse-out">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Java Script
+    ================================================== -->
+    <!-- script
+    ================================================== -->
+    {% load static %}
+    <script src="{% static 'js/modernizr.js' %}"></script>
+    <script src="{% static 'js/pace.min.js' %}"></script>
+    <script src="{% static 'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js' %}"></script>
+    <script src="{% static '//code.jquery.com/jquery-1.11.1.min.js' %}"></script>
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/argon.js' %}"></script>
+    <script src="{% static 'js/jquery.validate.js' %}"></script>
+    <script src="{% static 'js/argon.min.js' %}"></script>
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
